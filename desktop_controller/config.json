@@ -1,0 +1,4 @@
+{
+  "rover_url": "http://192.168.1.145:8080",
+  "notes": "Change this IP to the IP printed by the ESP32 Serial Monitor."
+}

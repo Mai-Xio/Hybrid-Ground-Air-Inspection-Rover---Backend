@@ -1,0 +1,63 @@
+Return code: 0
+
+STDOUT:
+
+HAGAIR v3.0 mission start | scenario=normal | profile=general | hardware=False
+STEP | AQI | E | T | V | S | W | A | H | TIER | ACTIONS
+------------------------------------------------------------------------------------------------
+   0 |  86 | 0.12 | 0.10 | 0.10 | 0.12 | 0.00 | 0.05 | 0.10 | LOW      | CONTINUE_SLOW,LOG_TELEMETRY
+   1 |  87 | 0.13 | 0.10 | 0.10 | 0.12 | 0.00 | 0.05 | 0.10 | LOW      | CONTINUE_SLOW,LOG_TELEMETRY
+   2 |  77 | 0.11 | 0.10 | 0.10 | 0.12 | 0.00 | 0.05 | 0.10 | LOW      | CONTINUE_SLOW,LOG_TELEMETRY
+------------------------------------------------------------------------------------------------
+Mission log: /mnt/data/HAGAIR_v3_complete_working/hagair_software/data/logs/20260506_175736_normal_general.jsonl
+PASS: normal produces records
+PASS: normal H below high
+
+HAGAIR v3.0 mission start | scenario=pollution | profile=air_quality | hardware=False
+STEP | AQI | E | T | V | S | W | A | H | TIER | ACTIONS
+------------------------------------------------------------------------------------------------
+   0 | 335 | 0.52 | 0.10 | 0.10 | 0.47 | 0.00 | 0.05 | 0.37 | MEDIUM   | PAUSE_AND_SCAN,LOG_LOCATION
+   1 | 360 | 0.56 | 0.19 | 0.10 | 0.47 | 0.00 | 0.05 | 0.62 | HIGH     | STOP_ALERT,REQUEST_OPERATOR_CONFIRMATION,LOG_LOCATION,DRONE_STANDBY
+   2 | 334 | 0.52 | 0.18 | 0.10 | 0.47 | 0.00 | 0.05 | 0.37 | MEDIUM   | PAUSE_AND_SCAN,LOG_LOCATION
+------------------------------------------------------------------------------------------------
+Mission log: /mnt/data/HAGAIR_v3_complete_working/hagair_software/data/logs/20260506_175736_pollution_air_quality.jsonl
+PASS: pollution AQI high
+PASS: pollution high or critical
+
+HAGAIR v3.0 mission start | scenario=flood | profile=drainage | hardware=False
+STEP | AQI | E | T | V | S | W | A | H | TIER | ACTIONS
+------------------------------------------------------------------------------------------------
+   0 |  86 | 0.16 | 0.69 | 0.78 | 0.96 | 0.79 | 0.50 | 0.86 | CRITICAL | HALT_ROVER,ALERT_CRITICAL,LOG_LOCATION,DEPLOY_DRONE,WATER_FLOW_ALERT,SOIL_SAMPLE_SEQUENCE
+   1 |  83 | 0.16 | 0.79 | 0.78 | 0.96 | 0.79 | 0.50 | 0.86 | CRITICAL | HALT_ROVER,ALERT_CRITICAL,LOG_LOCATION,DEPLOY_DRONE,LEG_STANDBY,WATER_FLOW_ALERT,SOIL_SAMPLE_SEQUENCE
+   2 |  78 | 0.15 | 0.68 | 0.78 | 0.96 | 0.79 | 0.50 | 0.86 | CRITICAL | HALT_ROVER,ALERT_CRITICAL,LOG_LOCATION,DEPLOY_DRONE,WATER_FLOW_ALERT,SOIL_SAMPLE_SEQUENCE
+------------------------------------------------------------------------------------------------
+Mission log: /mnt/data/HAGAIR_v3_complete_working/hagair_software/data/logs/20260506_175736_flood_drainage.jsonl
+PASS: flood water score high
+PASS: flood gets halt or alert
+
+HAGAIR v3.0 mission start | scenario=fire | profile=night_ir | hardware=False
+STEP | AQI | E | T | V | S | W | A | H | TIER | ACTIONS
+------------------------------------------------------------------------------------------------
+   0 | 331 | 0.48 | 0.53 | 0.88 | 0.12 | 0.00 | 0.05 | 0.66 | HIGH     | STOP_ALERT,REQUEST_OPERATOR_CONFIRMATION,LOG_LOCATION,DRONE_STANDBY
+   1 | 324 | 0.47 | 0.53 | 0.88 | 0.12 | 0.00 | 0.05 | 0.66 | HIGH     | STOP_ALERT,REQUEST_OPERATOR_CONFIRMATION,LOG_LOCATION,DRONE_STANDBY
+   2 | 305 | 0.44 | 0.54 | 0.88 | 0.12 | 0.00 | 0.05 | 0.66 | HIGH     | STOP_ALERT,REQUEST_OPERATOR_CONFIRMATION,LOG_LOCATION,DRONE_STANDBY
+------------------------------------------------------------------------------------------------
+Mission log: /mnt/data/HAGAIR_v3_complete_working/hagair_software/data/logs/20260506_175736_fire_night_ir.jsonl
+PASS: fire visual high
+PASS: fire high or critical
+
+All HAGAIR tests passed.
+
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py", line 48821, in hydrate_crdt_from_proto
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py", line 747, in __call__
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+

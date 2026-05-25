@@ -1,0 +1,216 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HAGAIR v3.0 Operator Dashboard</title>
+<style>
+body { font-family: Arial, sans-serif; background:#0d1117; color:#e6edf3; margin:0; padding:24px; }
+h1 { margin-top:0; }
+.cards { display:grid; grid-template-columns: repeat(4, minmax(160px,1fr)); gap:12px; margin-bottom:18px; }
+.card { background:#161b22; border:1px solid #30363d; border-radius:14px; padding:16px; }
+.big { font-size:30px; font-weight:bold; }
+.low { background:#102a1c; }
+.medium { background:#302a10; }
+.high { background:#301a10; }
+.critical { background:#3a1010; }
+table { width:100%; border-collapse:collapse; background:#161b22; border-radius:12px; overflow:hidden; }
+th, td { padding:10px; border-bottom:1px solid #30363d; vertical-align:top; }
+th { text-align:left; background:#21262d; }
+pre { white-space:pre-wrap; background:#010409; padding:12px; border-radius:12px; overflow:auto; }
+.badge { display:inline-block; padding:4px 8px; border-radius:999px; background:#30363d; }
+</style>
+</head>
+<body>
+<h1>HAGAIR v3.0 Hybrid Inspection Rover Dashboard</h1>
+<p class="badge">Static presentation dashboard generated from mission logs</p>
+<div class="cards">
+  <div class="card"><div>Last Hazard H</div><div class="big">0.86</div></div>
+  <div class="card"><div>Last Tier</div><div class="big">CRITICAL</div></div>
+  <div class="card"><div>Last AQI</div><div class="big">78</div></div>
+  <div class="card"><div>Drone State</div><div class="big">DEPLOY</div></div>
+</div>
+<h2>Mission Timeline</h2>
+<table>
+<thead><tr><th>Step</th><th>Scenario</th><th>H</th><th>Tier</th><th>AQI</th><th>Terrain</th><th>Soil</th><th>Actions</th></tr></thead>
+<tbody>
+
+            <tr class="critical">
+              <td>0</td>
+              <td>flood</td>
+              <td>0.860</td>
+              <td>CRITICAL</td>
+              <td>86 / Satisfactory</td>
+              <td>flooded (0.69)</td>
+              <td>Agricultural Runoff (0.96)</td>
+              <td>HALT_ROVER, ALERT_CRITICAL, LOG_LOCATION, DEPLOY_DRONE, WATER_FLOW_ALERT, SOIL_SAMPLE_SEQUENCE</td>
+            </tr>
+            
+            <tr class="critical">
+              <td>1</td>
+              <td>flood</td>
+              <td>0.860</td>
+              <td>CRITICAL</td>
+              <td>83 / Satisfactory</td>
+              <td>flooded (0.79)</td>
+              <td>Agricultural Runoff (0.96)</td>
+              <td>HALT_ROVER, ALERT_CRITICAL, LOG_LOCATION, DEPLOY_DRONE, LEG_STANDBY, WATER_FLOW_ALERT, SOIL_SAMPLE_SEQUENCE</td>
+            </tr>
+            
+            <tr class="critical">
+              <td>2</td>
+              <td>flood</td>
+              <td>0.860</td>
+              <td>CRITICAL</td>
+              <td>78 / Satisfactory</td>
+              <td>flooded (0.68)</td>
+              <td>Agricultural Runoff (0.96)</td>
+              <td>HALT_ROVER, ALERT_CRITICAL, LOG_LOCATION, DEPLOY_DRONE, WATER_FLOW_ALERT, SOIL_SAMPLE_SEQUENCE</td>
+            </tr>
+            
+            <tr class="critical">
+              <td>3</td>
+              <td>flood</td>
+              <td>0.860</td>
+              <td>CRITICAL</td>
+              <td>82 / Satisfactory</td>
+              <td>flooded (0.79)</td>
+              <td>Agricultural Runoff (0.96)</td>
+              <td>HALT_ROVER, ALERT_CRITICAL, LOG_LOCATION, DEPLOY_DRONE, LEG_STANDBY, WATER_FLOW_ALERT, SOIL_SAMPLE_SEQUENCE</td>
+            </tr>
+            
+            <tr class="critical">
+              <td>4</td>
+              <td>flood</td>
+              <td>0.860</td>
+              <td>CRITICAL</td>
+              <td>88 / Satisfactory</td>
+              <td>flooded (0.78)</td>
+              <td>Agricultural Runoff (0.96)</td>
+              <td>HALT_ROVER, ALERT_CRITICAL, LOG_LOCATION, DEPLOY_DRONE, LEG_STANDBY, WATER_FLOW_ALERT, SOIL_SAMPLE_SEQUENCE</td>
+            </tr>
+            
+            <tr class="critical">
+              <td>5</td>
+              <td>flood</td>
+              <td>0.860</td>
+              <td>CRITICAL</td>
+              <td>78 / Satisfactory</td>
+              <td>flooded (0.77)</td>
+              <td>Agricultural Runoff (0.96)</td>
+              <td>HALT_ROVER, ALERT_CRITICAL, LOG_LOCATION, DEPLOY_DRONE, LEG_STANDBY, WATER_FLOW_ALERT, SOIL_SAMPLE_SEQUENCE</td>
+            </tr>
+            
+            <tr class="critical">
+              <td>6</td>
+              <td>flood</td>
+              <td>0.860</td>
+              <td>CRITICAL</td>
+              <td>81 / Satisfactory</td>
+              <td>flooded (0.80)</td>
+              <td>Agricultural Runoff (0.96)</td>
+              <td>HALT_ROVER, ALERT_CRITICAL, LOG_LOCATION, DEPLOY_DRONE, LEG_STANDBY, WATER_FLOW_ALERT, SOIL_SAMPLE_SEQUENCE</td>
+            </tr>
+            
+            <tr class="critical">
+              <td>7</td>
+              <td>flood</td>
+              <td>0.860</td>
+              <td>CRITICAL</td>
+              <td>83 / Satisfactory</td>
+              <td>flooded (0.78)</td>
+              <td>Agricultural Runoff (0.96)</td>
+              <td>HALT_ROVER, ALERT_CRITICAL, LOG_LOCATION, DEPLOY_DRONE, LEG_STANDBY, WATER_FLOW_ALERT, SOIL_SAMPLE_SEQUENCE</td>
+            </tr>
+            
+            <tr class="critical">
+              <td>8</td>
+              <td>flood</td>
+              <td>0.860</td>
+              <td>CRITICAL</td>
+              <td>75 / Satisfactory</td>
+              <td>flooded (0.78)</td>
+              <td>Agricultural Runoff (0.96)</td>
+              <td>HALT_ROVER, ALERT_CRITICAL, LOG_LOCATION, DEPLOY_DRONE, LEG_STANDBY, WATER_FLOW_ALERT, SOIL_SAMPLE_SEQUENCE</td>
+            </tr>
+            
+            <tr class="critical">
+              <td>9</td>
+              <td>flood</td>
+              <td>0.860</td>
+              <td>CRITICAL</td>
+              <td>78 / Satisfactory</td>
+              <td>flooded (0.69)</td>
+              <td>Agricultural Runoff (0.96)</td>
+              <td>HALT_ROVER, ALERT_CRITICAL, LOG_LOCATION, DEPLOY_DRONE, WATER_FLOW_ALERT, SOIL_SAMPLE_SEQUENCE</td>
+            </tr>
+            
+</tbody>
+</table>
+<h2>Chart Data</h2>
+<pre>[
+  {
+    &quot;step&quot;: 0,
+    &quot;H&quot;: 0.86,
+    &quot;E&quot;: 0.1605,
+    &quot;T&quot;: 0.6916
+  },
+  {
+    &quot;step&quot;: 1,
+    &quot;H&quot;: 0.86,
+    &quot;E&quot;: 0.1562,
+    &quot;T&quot;: 0.7868
+  },
+  {
+    &quot;step&quot;: 2,
+    &quot;H&quot;: 0.86,
+    &quot;E&quot;: 0.149,
+    &quot;T&quot;: 0.6768
+  },
+  {
+    &quot;step&quot;: 3,
+    &quot;H&quot;: 0.86,
+    &quot;E&quot;: 0.1547,
+    &quot;T&quot;: 0.7875
+  },
+  {
+    &quot;step&quot;: 4,
+    &quot;H&quot;: 0.86,
+    &quot;E&quot;: 0.1634,
+    &quot;T&quot;: 0.7821
+  },
+  {
+    &quot;step&quot;: 5,
+    &quot;H&quot;: 0.86,
+    &quot;E&quot;: 0.149,
+    &quot;T&quot;: 0.7738
+  },
+  {
+    &quot;step&quot;: 6,
+    &quot;H&quot;: 0.86,
+    &quot;E&quot;: 0.1533,
+    &quot;T&quot;: 0.7987
+  },
+  {
+    &quot;step&quot;: 7,
+    &quot;H&quot;: 0.86,
+    &quot;E&quot;: 0.1562,
+    &quot;T&quot;: 0.7843
+  },
+  {
+    &quot;step&quot;: 8,
+    &quot;H&quot;: 0.86,
+    &quot;E&quot;: 0.1447,
+    &quot;T&quot;: 0.7758
+  },
+  {
+    &quot;step&quot;: 9,
+    &quot;H&quot;: 0.86,
+    &quot;E&quot;: 0.149,
+    &quot;T&quot;: 0.695
+  }
+]</pre>
+<h2>Presentation Tip</h2>
+<p>Show the rover on a stand, keep DEMO_SAFE_MODE enabled, then run flood / pollution / fire scenarios to show automatic halt, drone standby/deploy decisions, quadruped/leg standby, AQI, soil, water-flow and hazard fusion.</p>
+</body>
+</html>
